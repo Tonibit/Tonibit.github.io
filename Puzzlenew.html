@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+		var result = 0;
+
+		function AskQuestion(textBoxId, answer)
+		{
+			var userAnswer = document.getElementById(textBoxId).value;
+			if(userAnswer.toLowerCase(answer) == answer)
+				result++;
+
+		}
+
+		function AskQuestions()
+		{
+			AskQuestion("userAnswer1", "часы");
+			AskQuestion("userAnswer2", "сухих");
+			AskQuestion("userAnswer3", "зарплата");		
+			AskQuestion("userAnswer4", "секретом");
+
+
+			if (result == 4){
+				alert("Поздравляю! Вы угадали все загадки!");
+			}
+			else{
+				alert("Количество правильных ответов: "+result); 
+			}
+			alert("Спасибо!");
+
+		}		
+
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="#">Загадки</a><span>/</span>
+		<a href="Guess2.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">	
+		<h3>Игра в загадки</h3>			
+	    <div id="box_puzzle">
+	    	<h5>Отгадай загадки!</h5>
+	    	<p>Что может в одно и то же время: стоять и ходить,висеть и стоять, ходить и лежать?</p>
+	    	<input type="text" id="userAnswer1">
+
+            <p>Каких камней нет в море?</p>
+            <input type="text" id="userAnswer2">
+
+            <p>Не лёд, а тает. Не лодка, а уплывает.</p>
+            <input type="text" id="userAnswer3">
+
+            <p>Чем можно поделиться только один раз?</p>
+            <input type="text" id="userAnswer4">
+
+            <br><br/>
+            <a href="#" onclick="AskQuestions();">Отправить</a>
+	    </div>
+</div>
+
+<div id="footer_puzzle">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
